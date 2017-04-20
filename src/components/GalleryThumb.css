@@ -10,8 +10,12 @@
 }
   .c-galleryThumb__caption {
     padding : 1em;
-  }
 
+  }
+  .c-galleryThumb__caption h4 {
+   color: #e74c3c;
+   background-color: #ecf0f1;
+  }
   .c-galleryThumb__figure {
     overflow: hidden;
   }
@@ -47,3 +51,6 @@
 
     padding : 1em 0 .5em;
   }
+.o-btnPrimary{
+  color: #e74c3c;
+}

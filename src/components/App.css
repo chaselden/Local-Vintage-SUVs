@@ -1,6 +1,5 @@
 .c-nav {
   position : relative;
-
   padding : 2em 0;
 }
   .c-nav__cfImage {
@@ -17,6 +16,9 @@
 
     font-size: 1.5em;
     letter-spacing: 1px;
+  }
+  .c-nav__logo h1 {
+    color: #e74c3c;
   }
 
   .c-nav__spinner {

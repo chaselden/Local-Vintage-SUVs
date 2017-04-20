@@ -24,9 +24,22 @@
   right: .5em;
 
   z-index: 100;
-
 }
 
+.c-gallery__modalOpenLink img{
+  margin-bottom: -60px;
+  margin-top: -60px;
+  padding:10px;
+  border:2px solid #e74c3c;
+  background-color:inherit;
+  image-resolution: from-image;
+}
+img {
+  /*border:2px solid #021a40;*/
+  padding:2px;
+  border:2px solid #e74c3c;
+  background-color:#ddd;
+}
 @media (orientation:landscape) {
   .c-gallery__modalClose {
     top: 3em;
@@ -41,39 +54,45 @@
 }
 
 
-.c-gallery__modalOpenTitle {
+/*.c-gallery__modalOpenTitle {
   font-size: 1.25em;
-
   position: absolute;
-
   bottom: 1em;
   left: 0;
   z-index: 0;
-
   padding: .5em;
-  color: #fff;
-
-  background: rgba(0,0,0,0.5);
+  color: #e74c3c;
+}*/
+.c-gallery__modalOpen_Title{
+  font-size: 1.30em;
+  color: #e74c3c;
+  margin-bottom: 20px;
 }
-
+.c-gallery__modalOpenSeen{
+  font-size: 1.30em;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+.c-gallery__modalOpenDetail{
+  font-size: 1.30em;
+  color: #e74c3c;
+}
 .c-gallery__modalOpenLink {
   display: block;
   position: relative;
-
   overflow: hidden;
-
   height: 100%;
-
 }
 
 .c-gallery__modalOpenLink a {
   display: flex;
   justify-content: center;
   align-items: center;
-
   height: 100%;
 }
-
+.c-gallery__close{
+  color: #e74c3c;
+}
 .c-gallery__modalOpenLink img {
   // work around transform and scale rendering issues
   margin: -1px;

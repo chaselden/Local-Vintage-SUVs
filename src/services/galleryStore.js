@@ -4,6 +4,8 @@ export function loadGalleries (contentTypeId) {
   return getClient().getEntries({
     content_type: contentTypeId
   }).then(payload => {
+    console.log(payload.items, 'yayaya');
+
     return payload.items
   })
 }

@@ -1,4 +1,4 @@
-export const deliveryAccessToken = '8c6d9bb62a89a05e4f88af2784a0a3f8bcacc7b401084d50f577dfc5f6df0c61';
-export const spaceId = 'fbr4i5aajb0w';
+export const deliveryAccessToken = '4a9874aca2cda2e2b2f8c66d1e5424578901ed7f1a08586834d45d0ef442a5b6';
+export const spaceId = '2g47pwmjpphh';
 
-export const galleryTypeId = '7leLzv8hW06amGmke86y8G';
+export const galleryTypeId = 'blogPost';

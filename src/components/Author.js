@@ -5,7 +5,7 @@ import styles from './Author.css'
 function Author ({ author }) {
   return (
     <div styleName="c-author">
-      { author.fields.name }
+      {/* { author.fields.name } */}
     </div>
   )
 }

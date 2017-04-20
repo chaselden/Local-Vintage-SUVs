@@ -58,10 +58,10 @@ class Gallery extends React.Component {
   renderImageEntry (entry) {
     return (
       <div>
+
         <ResponsiveImage
-            src={entry.fields.photo.fields.file.url}
-            alt={entry.fields.title}
-        />
+            src={gallery.fields.makeAndModel.fields.file.url}
+            alt={entry.fields.title} />
 
         <div className="image-gallery-description">
           {
@@ -91,14 +91,18 @@ class Gallery extends React.Component {
     const gallery = this.props.galleries.entries[ this.props.params.galleryId ]
 
     if (gallery && gallery.fields) {
+      console.log(gallery.fields);
+      console.log(gallery.fields.makeAndModel.fields.file.url)
+
       return (
+
         <div>
+
           <div styleName="c-gallery__header">
-            <h1 styleName="c-gallery__headline">{ gallery.fields.title }</h1>
             <Link to={'/'} styleName="c-gallery__close" className="o-btnClose" aria-label="Go back to all galleries">
               ✕
             </Link>
-            <Author author={ gallery.fields.author }></Author>
+            {/* <Author author={ gallery.fields.author }></Author> */}
 
             { this.renderTags(gallery) }
 
@@ -110,16 +114,20 @@ class Gallery extends React.Component {
 
           <ul className="o-listThirds">
             {
-              gallery.fields.images.map((entry, index) => {
+              gallery.fields.details.map((entry, index) => {
                 return (
-                  <li key={entry.sys.id}>
+                  <li key={gallery.sys.id}>
                     <div styleName="c-gallery__modalOpenLink">
-                      <Link to={`/gallery/${gallery.sys.id}/image/${entry.fields.photo.sys.id}`} >
-                        <ResponsiveImage src={ entry.fields.photo.fields.file.url } alt={entry.fields.title} />
+                      <Link to={`/gallery/${gallery.sys.id}/image/${gallery.fields.makeAndModel.fields.file.url}`} >
+                        <ResponsiveImage src={ gallery.fields.makeAndModel.fields.file.url } alt={`Open Gallery ${gallery.sys.id}`} />
                       </Link>
-                      <div styleName="c-gallery__modalOpenTitle">{ entry.fields.title }</div>
+                      {/*<div styleName="c-gallery__modalOpenTitle">{ gallery.fields.makeAndModel.fields.title }</div> */}
                     </div>
+                    <div styleName="c-gallery__modalOpen_Title"><h3>VEHICLE:</h3>{ gallery.fields.makeAndModel.fields.title }</div>
+                    <div styleName="c-gallery__modalOpenSeen"><h3>SEEN AT:</h3>{ gallery.fields.seenWhere }</div>
+                    <div styleName="c-gallery__modalOpenDetail"><h3>DETAILS:</h3>  { gallery.fields.details }</div>
                   </li>
+
                 )
               })
             }
