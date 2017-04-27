@@ -23,11 +23,22 @@ class App extends React.Component {
     return (
       <div>
         <nav styleName='c-nav'>
+
           <div className='o-container'>
             <Link to={'/'} styleName='c-nav__logo'>
               <span><h1>Vintage  Local  SUV's </h1></span>
             </Link>
           </div>
+
+          <div styleName="c-nav__search-bar">
+            <input type="text" className="form-control bg-blue" placeholder=" Search..."/>
+            <span className="input-group-btn">
+              <button className="btn btn-default bg-blue" type="submit">
+                <span className="glyphicon glyphicon-search" aria-hidden="true"></span>
+              </button>
+            </span>
+          </div>
+
           {
             (() => {
               if (this.props.app.authState === 'loading') {

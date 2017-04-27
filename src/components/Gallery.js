@@ -28,10 +28,27 @@ class Gallery extends React.Component {
   componentDidMount () {
     this.props.loadGallery(this.props.params.galleryId)
   }
+  getCurrentRoutes() {
+       state.routes();
+  }
 
   closeModal () {
     browserHistory.goBack()
   }
+
+//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&//
+//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&//
+  // var scrollTo =  function() {
+  //    $(window).unload(function() {
+  //       var scrollPosition = $("div#element").scrollTop();
+  //       localStorage.setItem("scrollPosition", scrollPosition);
+  //    });
+  //    if(localStorage.scrollPosition) {
+  //       $("div#element").scrollTop(localStorage.getItem("scrollPosition"));
+  //    }
+  // }
+  //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&//
+  //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&//
 
   getIndexOfImage (imageCollection, id) {
     let foundIndex = -1
@@ -97,7 +114,6 @@ class Gallery extends React.Component {
       return (
 
         <div>
-
           <div styleName="c-gallery__header">
             <Link to={'/'} styleName="c-gallery__close" className="o-btnClose" aria-label="Go back to all galleries">
               ✕
